@@ -5,14 +5,6 @@
 
 > https://AlezHibali.github.io
 
-### Website Preview
-<p align="center"> 
-  <kbd>
-    <a href="https://varadbhogayata.github.io" target="_blank"><img src="examples/preview.gif">
-  </a>
-  </kbd>
-</p>
-
 ## Activity 1
 ![Alt text](assets/img/444PRA/activity1.png)
 
