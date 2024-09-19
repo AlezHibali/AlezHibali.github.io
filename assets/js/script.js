@@ -1,4 +1,3 @@
-// projects array
 const projects = [
   {
     id: 1,
@@ -14,7 +13,8 @@ const projects = [
       'Designed UI with Webflow and integrated Jetboot.'
     ],
     demoLink: 'https://devpost.com/software/rift-ranks',
-    sourceLink: 'https://github.com/AlezHibali/RiftRanks'
+    sourceLink: 'https://github.com/AlezHibali/RiftRanks',
+    timestamp: new Date('2023-08-01')
   },
   {
     id: 2,
@@ -29,44 +29,24 @@ const projects = [
       'Presents data via Webflow and custom JavaScript.'
     ],
     demoLink: 'https://devpost.com/software/project_name-wf9l8d',
-    sourceLink: 'https://github.com/AlezHibali/Model_Master_TiDB_Hackathon_2023'
+    sourceLink: 'https://github.com/AlezHibali/Model_Master_TiDB_Hackathon_2023',
+    timestamp: new Date('2023-06-01')
   },
-  // Add more projects as needed
+  // Add more projects with timestamps as needed
 ];
 
-// Function to generate HTML for a project
-function generateProjectHTML(project) {
-  return `
-    <div class="col s12 m6 l4">
-      <div class="card medium">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img alt="${project.title}" src="${project.imageUrl}" style="height: 100%; width: 100%" class="activator" />
-        </div>
-        <div class="card-content">
-          <span class="card-title activator teal-text hoverline">${project.title}<i class="mdi-navigation-more-vert right"></i></span>
-          <p>${project.summary}</p>
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text"><small>Descriptions</small><i class="mdi-navigation-close right"></i></span>
-          <ul>
-            <li><b>Tools:</b> ${project.tools}</li>
-            ${project.descriptions.map(desc => `<li>${desc}</li>`).join('')}
-          </ul>
-          <div class="card-action">
-            <a aria-label="Visit" href="${project.demoLink}" target="_blank" data-position="top" data-tooltip="View Online" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-external-link"></i></a>
-            <a aria-label="Visit the GitHub repo for project" href="${project.sourceLink}" target="_blank" data-position="top" data-tooltip="View Source" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-github"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
+// Function to sort projects by timestamp (most recent first)
+function sortProjectsByDate(projects) {
+  return projects.sort((a, b) => b.timestamp - a.timestamp);
 }
 
 // Function to display projects on the page
 function displayProjects(startIndex, endIndex) {
   const projectContainer = document.querySelector('#projects-container');
   projectContainer.innerHTML = ''; // Clear existing content
-  const projectsToDisplay = projects.slice(startIndex, endIndex);
+  const sortedProjects = sortProjectsByDate(projects); // Sort projects
+  const projectsToDisplay = sortedProjects.slice(startIndex, endIndex);
+  
   projectsToDisplay.forEach(project => {
     projectContainer.innerHTML += generateProjectHTML(project);
   });
