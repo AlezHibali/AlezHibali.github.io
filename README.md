@@ -31,6 +31,7 @@
 ✔️ Projects \
 ✔️ Skills \
 ✔️ Education\
+✔️ Place Travelled\
 ✔️ Contact Info\
 ✔️ Resume
 
