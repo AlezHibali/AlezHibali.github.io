@@ -11,6 +11,7 @@
 ## Activity 2
 ### Webpage
 ![Alt text](assets/img/444PRA/activity2_page.png)
+![Alt text](assets/img/444PRA/activity2_page2.png)
 ### Repo
 ![Alt text](assets/img/444PRA/activity2_repo.png)
 
