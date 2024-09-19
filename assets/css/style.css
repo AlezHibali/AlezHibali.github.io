@@ -494,8 +494,11 @@ a.hoverline:hover {
   vertical-align: middle;
   display: table-cell;
   object-fit: contain; /* Keeps the aspect ratio without stretching */
-  width: 100px;  /* Set width to 100 pixels */
-  height: 100px; /* Set height to 100 pixels */
+}
+
+.logo-small {
+  width: 100px;
+  height: 100px;
 }
 
 .card.large .card-content p {
