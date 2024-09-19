@@ -473,7 +473,7 @@ a.hoverline {
 } */
 
 a.hoverline:hover {
-  border-bottom: 3px solid #004d40 !important;
+  border-bottom: 3px solid #1952b3 !important;
 }
 
 #skills .card.large {
@@ -554,7 +554,7 @@ small {
 /* main .teal-text */
 
 .teal-text {
-  color: #008073 !important;
+  color: #2236ba !important;
 }
 
 /* .teal-text {
@@ -564,7 +564,7 @@ small {
 /* .teal */
 
 .teal {
-  background-color: #008073 !important;
+  background-color: #2236ba !important;
 }
 
 /* .teal {
