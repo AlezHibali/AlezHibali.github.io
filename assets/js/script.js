@@ -47,10 +47,10 @@ function generateProjectHTML(project) {
           <p>${project.summary}</p>
         </div>
         <div class="card-reveal">
-          <span class="card-title grey-text"><small>descriptions</small><i class="mdi-navigation-close right"></i></span>
+          <span class="card-title grey-text"><small>Descriptions</small><i class="mdi-navigation-close right"></i></span>
           <ul>
             <li><b>Tools:</b> ${project.tools}</li>
-            ${project.descriptions.map(descriptions => `<li>${descriptions}</li>`).join('')}
+            ${project.descriptions.map(desc => `<li>${desc}</li>`).join('')}
           </ul>
           <div class="card-action">
             <a aria-label="Visit" href="${project.demoLink}" target="_blank" data-position="top" data-tooltip="View Online" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-external-link"></i></a>
@@ -65,28 +65,46 @@ function generateProjectHTML(project) {
 // Function to display projects on the page
 function displayProjects(startIndex, endIndex) {
   const projectContainer = document.querySelector('#projects-container');
+  projectContainer.innerHTML = ''; // Clear existing content
   const projectsToDisplay = projects.slice(startIndex, endIndex);
-  console.log("B")
   projectsToDisplay.forEach(project => {
     projectContainer.innerHTML += generateProjectHTML(project);
-    console.log("C")
   });
 }
 
-// Handle the "Load More" button functionality
-let currentIndex = 0;
-const projectsPerPage = 1; // Number of projects to show per page
+// Handle the "Load More / Show Less" button functionality
+let currentIndex = 1; // Start with the first project displayed
+const projectsPerPage = 1; // Number of projects to show per click
+const totalProjects = projects.length; // Total number of projects
 
 document.getElementById('load-more').addEventListener('click', () => {
-  console.log("A")
-  currentIndex += projectsPerPage;
-  displayProjects(currentIndex, currentIndex + projectsPerPage);
+  if (currentIndex < totalProjects) {
+    displayProjects(0, currentIndex + projectsPerPage); // Show projects from index 0 to currentIndex + 1
+    currentIndex += projectsPerPage; // Increment the current index
+  }
 
-  // Hide the button if no more projects to load
-  if (currentIndex >= projects.length) {
+  // If all projects are shown, hide the button
+  if (currentIndex >= totalProjects) {
     document.getElementById('load-more').style.display = 'none';
+  }
+
+  // Change the button text if showing all projects
+  if (currentIndex === totalProjects) {
+    document.getElementById('load-more').textContent = 'Show Less';
   }
 });
 
-// Initial load to show at least one project
-displayProjects(currentIndex, currentIndex + projectsPerPage);
+// Handle Show Less functionality
+document.getElementById('load-more').addEventListener('dblclick', () => {
+  currentIndex = Math.max(currentIndex - projectsPerPage, 1); // Decrement the current index but not below 1
+  displayProjects(0, currentIndex); // Show projects up to the new current index
+  document.getElementById('load-more').style.display = 'block'; // Show the button again
+
+  // Change button text back to "Load More"
+  if (currentIndex < totalProjects) {
+    document.getElementById('load-more').textContent = 'Load More';
+  }
+});
+
+// Initial load to show the first project
+displayProjects(0, currentIndex);
