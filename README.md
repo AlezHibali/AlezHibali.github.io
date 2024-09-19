@@ -16,6 +16,10 @@
 ![Alt text](assets/img/444PRA/activity2_repo.png)
 
 ## Activity 3
+### Webpage
+![Alt text](assets/img/444PRA/activity3_page.png)
+### Repo
+![Alt text](assets/img/444PRA/activity3_repo.png)
 
 ## Activity 4
 ### Webpage
