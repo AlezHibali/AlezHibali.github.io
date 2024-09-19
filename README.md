@@ -9,9 +9,9 @@
 ![Alt text](assets/img/444PRA/activity1.png)
 
 ## Activity 2
-# Webpage
+### Webpage
 ![Alt text](assets/img/444PRA/activity2_page.png)
-# Repo
+### Repo
 ![Alt text](assets/img/444PRA/activity2_repo.png)
 
 ## Activity 3
