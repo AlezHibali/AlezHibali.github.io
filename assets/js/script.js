@@ -32,8 +32,35 @@ const projects = [
     sourceLink: 'https://github.com/AlezHibali/Model_Master_TiDB_Hackathon_2023',
     timestamp: new Date('2023-06-01')
   },
-  // Add more projects with timestamps as needed
 ];
+
+// Function to generate HTML for a project
+function generateProjectHTML(project) {
+  return `
+    <div class="col s12 m6 l4">
+      <div class="card medium">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img alt="${project.title}" src="${project.imageUrl}" style="height: 100%; width: 100%" class="activator" />
+        </div>
+        <div class="card-content">
+          <span class="card-title activator teal-text hoverline">${project.title}<i class="mdi-navigation-more-vert right"></i></span>
+          <p>${project.summary}</p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text"><small>descriptions</small><i class="mdi-navigation-close right"></i></span>
+          <ul>
+            <li><b>Tools:</b> ${project.tools}</li>
+            ${project.descriptions.map(descriptions => <li>${descriptions}</li>).join('')}
+          </ul>
+          <div class="card-action">
+            <a aria-label="Visit" href="${project.demoLink}" target="_blank" data-position="top" data-tooltip="View Online" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-external-link"></i></a>
+            <a aria-label="Visit the GitHub repo for project" href="${project.sourceLink}" target="_blank" data-position="top" data-tooltip="View Source" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>`
+  ;
+}
 
 // Function to sort projects by timestamp (most recent first)
 function sortProjectsByDate(projects) {
