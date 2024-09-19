@@ -493,7 +493,6 @@ a.hoverline:hover {
   text-align: center;
   vertical-align: middle;
   display: table-cell;
-  object-fit: contain; /* Keeps the aspect ratio without stretching */
 }
 
 .logo-small {
