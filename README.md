@@ -1,6 +1,8 @@
 # Personal Portfolio ⚡️ 
 > This is the Github Portfolio for Daixin Tian!
+
 > This repo is a clone of https://github.com/varadbhogayata/varadbhogayata.github.io
+
 > https://AlezHibali.github.io
 
 ### Website Preview
@@ -12,6 +14,7 @@
 </p>
 
 ## Activity 1
+![Alt text](assets/img/444PRA/activity1.png)
 
 ## Activity 2
 
