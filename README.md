@@ -5,6 +5,14 @@
 
 > https://AlezHibali.github.io
 
+### Website Preview
+<p align="center"> 
+  <kbd>
+    <a href="https://alezhibali.github.io/" target="_blank"><img src="assets/img/demo.gif">
+  </a>
+  </kbd>
+</p>
+
 ## Activity 1
 ![Alt text](assets/img/444PRA/activity1.png)
 
@@ -28,6 +36,10 @@
 ![Alt text](assets/img/444PRA/activity4_repo.png)
 
 ## Activity 5
+### Webpage
+![Alt text](assets/img/444PRA/activity5_page.gif)
+### Repo
+![Alt text](assets/img/444PRA/activity5_repo.png)
 
 ## Sections 📚
 ✔️ About me\
