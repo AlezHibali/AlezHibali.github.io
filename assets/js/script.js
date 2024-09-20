@@ -1,3 +1,4 @@
+// project list
 const projects = [
   {
     id: 1,
@@ -95,10 +96,9 @@ function displayProjects(startIndex, endIndex) {
   });
 }
 
-// Handle the "Load More / Show Less" button functionality
-let currentIndex = 1; // Start with the first project displayed
-const projectsPerPage = 1; // Number of projects to show per click
-const totalProjects = projects.length; // Total number of projects
+let currentIndex = 1;
+const projectsPerPage = 1; // # projects to show per click
+const totalProjects = projects.length; // total # projects
 
 document.getElementById('load-more').addEventListener('click', () => {
   // handle Show Less function to show one project only
@@ -119,5 +119,4 @@ document.getElementById('load-more').addEventListener('click', () => {
   }
 });
 
-// Initial load to show the first project
 displayProjects(0, currentIndex);
