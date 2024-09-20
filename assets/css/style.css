@@ -320,6 +320,7 @@ h3 {
   position: relative;
 } */
 
+/* intro background color behind overlay */
 #intro.section {
   background: #a7ffeb repeat;
   position: relative;
@@ -356,6 +357,7 @@ h3 {
   padding: 0 10px;
 }
 
+/* homepage overlay */
 .overlay {
   background-color: rgba(11, 153, 224, 0.4);
   height: 100%;
