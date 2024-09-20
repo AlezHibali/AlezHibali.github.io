@@ -46,7 +46,7 @@ const projects = [
     ],
     demoLink: 'https://devpost.com/software/emoxt',
     sourceLink: 'https://github.com/AlezHibali/TOHack2022_EMOXT',
-    timestamp: new Date('2024-05-01')
+    timestamp: new Date('2022-05-01')
   }
 ];
 
