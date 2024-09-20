@@ -8,7 +8,7 @@
 ### Website Preview
 <p align="center"> 
   <kbd>
-    <a href="https://alezhibali.github.io/" target="_blank"><img src="assets/img/demo.gif">
+    <a href="https://alezhibali.github.io/" target="_blank"><img src="assets/img/444PRA/demo.gif">
   </a>
   </kbd>
 </p>
