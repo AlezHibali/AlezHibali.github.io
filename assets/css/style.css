@@ -495,10 +495,10 @@ a.hoverline:hover {
   display: table-cell;
 }
 
-.logo-small {
+/* .logo-small {
   width: 100px;
   height: 100px;
-}
+} */
 
 .card.large .card-content p {
   color: inherit;
