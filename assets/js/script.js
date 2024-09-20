@@ -50,7 +50,7 @@ function generateProjectHTML(project) {
           <span class="card-title grey-text"><small>descriptions</small><i class="mdi-navigation-close right"></i></span>
           <ul>
             <li><b>Tools:</b> ${project.tools}</li>
-            ${project.descriptions.map(descriptions => <li>${descriptions}</li>).join('')}
+            ${project.descriptions.map(descriptions => `<li>${descriptions}</li>`).join('')}
           </ul>
           <div class="card-action">
             <a aria-label="Visit" href="${project.demoLink}" target="_blank" data-position="top" data-tooltip="View Online" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-external-link"></i></a>
