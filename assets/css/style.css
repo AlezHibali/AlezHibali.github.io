@@ -476,6 +476,13 @@ a.hoverline:hover {
   border-bottom: 3px solid #1952b3 !important;
 }
 
+/* customized button for load more */
+.custom-blue-button {
+  background-color: rgb(46, 194, 231);
+  color: white; /* Ensures text is visible against the blue background */
+  border: none; /* Optional: Removes any default border */
+}
+
 #skills .card.large {
   height: 360px;
 }
@@ -552,7 +559,7 @@ small {
 }
 
 /* main .teal-text */
-
+/* icon on the left column and all title names */
 .teal-text {
   color: #2fabe8 !important;
 }
