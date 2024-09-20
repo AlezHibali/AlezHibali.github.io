@@ -85,22 +85,21 @@ const projectsPerPage = 1; // Number of projects to show per click
 const totalProjects = projects.length; // Total number of projects
 
 document.getElementById('load-more').addEventListener('click', () => {
-  // handle Show Less function
-  if (document.getElementById('load-more').textContent === 'Show Less') {
-    displayProjects(0, 1);
-    document.getElementById('load-more').textContent = 'Load More';
-    currentIndex = 1;
-    return
-  }
-
-  if (currentIndex < totalProjects) {
-    displayProjects(0, currentIndex + projectsPerPage); // Show projects from index 0 to currentIndex + 1
-    currentIndex += projectsPerPage; // Increment the current index
-  }
-
-  // Switch Buttons between Show Less and Load More
+  // handle Show Less function to show one project only
   if (currentIndex >= totalProjects) {
-    document.getElementById('load-more').textContent = 'Show Less';
+    currentIndex = 1;
+    displayProjects(0, currentIndex);
+    document.getElementById('load-more').textContent = 'Load More';
+  }
+  else {
+    // Display new projects and increment currentIndex
+    displayProjects(0, currentIndex + projectsPerPage);
+    currentIndex += projectsPerPage;
+
+    // Switch Buttons between Show Less and Load More
+    if (currentIndex >= totalProjects) {
+      document.getElementById('load-more').textContent = 'Show Less';
+    }
   }
 });
 
