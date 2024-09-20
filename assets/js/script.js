@@ -89,6 +89,7 @@ document.getElementById('load-more').addEventListener('click', () => {
   if (document.getElementById('load-more').textContent === 'Show Less') {
     displayProjects(0, 1);
     document.getElementById('load-more').textContent = 'Load More';
+    currentIndex = 1;
     return
   }
 
