@@ -31,7 +31,7 @@ const projects = [
     demoLink: 'https://devpost.com/software/project_name-wf9l8d',
     sourceLink: 'https://github.com/AlezHibali/Model_Master_TiDB_Hackathon_2023',
     timestamp: new Date('2023-06-01')
-  },
+  }
 ];
 
 // Function to generate HTML for a project
@@ -85,18 +85,20 @@ const projectsPerPage = 1; // Number of projects to show per click
 const totalProjects = projects.length; // Total number of projects
 
 document.getElementById('load-more').addEventListener('click', () => {
+  // handle Show Less function
+  if (document.getElementById('load-more').textContent === 'Show Less') {
+    displayProjects(0, 1);
+    document.getElementById('load-more').textContent = 'Load More';
+    return
+  }
+
   if (currentIndex < totalProjects) {
     displayProjects(0, currentIndex + projectsPerPage); // Show projects from index 0 to currentIndex + 1
     currentIndex += projectsPerPage; // Increment the current index
   }
 
-  // If all projects are shown, hide the button
+  // Switch Buttons between Show Less and Load More
   if (currentIndex >= totalProjects) {
-    document.getElementById('load-more').style.display = 'none';
-  }
-
-  // Change the button text if showing all projects
-  if (currentIndex === totalProjects) {
     document.getElementById('load-more').textContent = 'Show Less';
   }
 });
