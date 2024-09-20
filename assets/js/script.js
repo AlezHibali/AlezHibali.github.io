@@ -1,7 +1,6 @@
 // project list
 const projects = [
   {
-    id: 1,
     title: 'Rift Ranks',
     summary: 'Webpage to Experience Powerful and Convincing Ranking System and Seamless Navigation',
     imageUrl: '/assets/img/444PRA/rift_ranks_logo.jpg',
@@ -18,7 +17,6 @@ const projects = [
     timestamp: new Date('2023-08-01')
   },
   {
-    id: 2,
     title: 'Model Master',
     summary: 'A comprehensive collection of AI models in various fields.',
     imageUrl: '/assets/img/444PRA/Model_Master_logo.jpg',
@@ -34,7 +32,6 @@ const projects = [
     timestamp: new Date('2023-06-01')
   },
   {
-    id: 3,
     title: 'EMOXT',
     summary: 'Transcribe recorded and add emojis using machine learning.',
     imageUrl: '/assets/img/444PRA/EMOXT_logo.jpg',
@@ -67,7 +64,7 @@ function generateProjectHTML(project) {
           <span class="card-title grey-text"><small>descriptions</small><i class="mdi-navigation-close right"></i></span>
           <ul>
             <li><b>Tools:</b> ${project.tools}</li>
-            ${project.descriptions.map(descriptions => `<li>${descriptions}</li>`).join('')}
+            ${project.descriptions.map(description => `<li>${description}</li>`).join('')}
           </ul>
           <div class="card-action">
             <a aria-label="Visit" href="${project.demoLink}" target="_blank" data-position="top" data-tooltip="View Online" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-external-link"></i></a>
