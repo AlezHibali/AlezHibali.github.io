@@ -104,17 +104,5 @@ document.getElementById('load-more').addEventListener('click', () => {
   }
 });
 
-// Handle Show Less functionality
-document.getElementById('load-more').addEventListener('dblclick', () => {
-  currentIndex = Math.max(currentIndex - projectsPerPage, 1); // Decrement the current index but not below 1
-  displayProjects(0, currentIndex); // Show projects up to the new current index
-  document.getElementById('load-more').style.display = 'block'; // Show the button again
-
-  // Change button text back to "Load More"
-  if (currentIndex < totalProjects) {
-    document.getElementById('load-more').textContent = 'Load More';
-  }
-});
-
 // Initial load to show the first project
 displayProjects(0, currentIndex);
