@@ -31,6 +31,22 @@ const projects = [
     demoLink: 'https://devpost.com/software/project_name-wf9l8d',
     sourceLink: 'https://github.com/AlezHibali/Model_Master_TiDB_Hackathon_2023',
     timestamp: new Date('2023-06-01')
+  },
+  {
+    id: 3,
+    title: 'EMOXT',
+    summary: 'Transcribe recorded and add emojis using machine learning.',
+    imageUrl: '/assets/img/444PRA/EMOXT_logo.jpg',
+    tools: 'Flask, HTML, JavaScript, css, Python, Assembly.ai',
+    descriptions: [
+      'Transcribes audio using Assembly.ai.',
+      'Detects emotions in the transcribed text.',
+      'Inserts emojis based on detected emotions.',
+      'Integrates frontend and backend with Flask.'
+    ],
+    demoLink: 'https://devpost.com/software/emoxt',
+    sourceLink: 'https://github.com/AlezHibali/TOHack2022_EMOXT',
+    timestamp: new Date('2024-05-01')
   }
 ];
 
@@ -62,7 +78,7 @@ function generateProjectHTML(project) {
   ;
 }
 
-// Function to sort projects by timestamp (most recent first)
+// Sorting by timestamp (most recent first)
 function sortProjectsByDate(projects) {
   return projects.sort((a, b) => b.timestamp - a.timestamp);
 }
