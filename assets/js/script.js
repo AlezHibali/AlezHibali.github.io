@@ -1,6 +1,22 @@
 // project list
 const projects = [
   {
+    title: 'ValoPlanner',
+    summary: 'Webpage to Experience Powerful and Convincing Ranking System and Seamless Navigation',
+    imageUrl: '/assets/img/444PRA/valoplanner_logo.jpg',
+    tools: 'Amazon Bedrock, CodePipepline, Lambda, EC2, CSS, Flask, waitress, HTML, JavaScript, Python',
+    descriptions: [
+      'Top 25 finalist out of 3295 participants, winners to be announced in December 2024.',
+      'Designed and implemented an LLM-powered digital assistant.',
+      'Leveraged extensive data and utilized AWS Lambda and Bedrock to tune LLM agent.',
+      'Continuous deployment via AWS CodePipeline and CodeDeploy',
+      'Final report: https://drive.google.com/file/d/18IluqYHskcRQp12X4Z4pNzl6kuzy7iNk/view'
+    ],
+    demoLink: 'https://devpost.com/software/edg-learning',
+    sourceLink: 'https://github.com/AlezHibali/2024-October-VCT-Hackathon',
+    timestamp: new Date('2024-10-01')
+  },
+  {
     title: 'Rift Ranks',
     summary: 'Webpage to Experience Powerful and Convincing Ranking System and Seamless Navigation',
     imageUrl: '/assets/img/444PRA/rift_ranks_logo.jpg',
