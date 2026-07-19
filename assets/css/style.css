@@ -11,8 +11,9 @@
   /* background-size: cover;  */
   margin: -31px; 
   margin-left:-7px;
-  border: 6px solid rgba(6, 140, 230, 0.4); 
+  border: 6px solid rgba(47, 171, 232, 0.35);
   border-radius: 50% !important;
+  box-shadow: 0 16px 36px rgba(21, 59, 87, 0.16);
 }
 
 .profile-pic img {
@@ -48,6 +49,7 @@
   border-radius: 45px;
   display: inline-block;
   margin: 4px;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .github {
@@ -85,7 +87,7 @@
   position: relative;
   padding: 11px 35px;
   background: #fff;
-  color: #177ac0;
+  color: #146aa7;
   border: 2px solid #fff;
   font-weight: 600;
   font-size: 15px;
@@ -116,16 +118,57 @@
 }
 
 .contactme:hover{
-  color: #2c87e3;
+  color: #146aa7;
   background-color: white;
+}
+
+.resume-btn {
+  position: relative;
+  padding: 11px 26px;
+  background: #ffb703;
+  color: #102a43;
+  border: 2px solid #ffb703;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0;
+  display: inline-block;
+  margin-top: 1.5em;
+  border-radius: 5px;
+}
+
+.resume-btn:hover,
+.resume-btn:focus {
+  background: #fff;
+  border-color: #fff;
+  color: #102a43;
+}
+
+.resume-btn.secondary {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.85);
+  color: #fff;
+}
+
+.resume-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.resume-outline {
+  background: #fff !important;
+  border: 1px solid #2fabe8;
+  color: #146aa7 !important;
 }
 /* main body */
 
 /* body-color */
 
 body {
-  color: #333;
+  color: #243342;
   font-size: 18px;
+  background: #f6fafc;
 }
 
 /* body {
@@ -141,7 +184,7 @@ body {
 
 /* font color for dynamic words and contact */
 a {
-  color: #357ae8;
+  color: #146aa7;
 }
 
 /* main blockqoute */
@@ -201,7 +244,7 @@ nav i {
 } */
 
 main {
-  background: url(../../assets/img/bg.png) repeat;
+  background: #f6fafc;
   padding-left: 190px;
 }
 
@@ -258,7 +301,7 @@ ul.table-of-contents li.logo a.active, ul.table-of-contents li.logo a:hover {
 } */
 
 ul.side-nav.fixed li.logo {
-  background-color: #fafafa;
+  background-color: #f6fafc;
   border-bottom: 1px solid #ddd;
   box-sizing: content-box;
   min-height: 90px;
@@ -271,7 +314,7 @@ ul.side-nav.fixed li.logo a {
 }
 
 ul.table-of-contents li:not(.logo) a.active, ul.table-of-contents li:not(.logo) a:hover {
-  background-color: #fafafa;
+  background-color: #eef7fb;
   border-left: 3px solid;
 }
 
@@ -301,6 +344,7 @@ h3 {
   margin-top: 0;
   padding: 30px 40px;
   text-transform: uppercase;
+  letter-spacing: 0;
 }
 
 .section {
@@ -310,7 +354,7 @@ h3 {
 }
 
 .full-height {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* Original */
@@ -322,7 +366,8 @@ h3 {
 
 /* intro background color behind overlay */
 #intro.section {
-  background: #a7ffeb repeat;
+  background: url(../../assets/img/minimal-ai-wallpaper.jpg) no-repeat center center/cover;
+  min-height: calc(100vh - 36px);
   position: relative;
 }
 
@@ -344,9 +389,9 @@ h3 {
 #intro.section .container *:not(span) {
   font-weight: 300;
   /* font-weight: 400; */
-  line-height: 150%;
+  line-height: 145%;
   /* padding: 0 0px; */
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.32);
 }
 
 #intro.section .underline {
@@ -359,7 +404,7 @@ h3 {
 
 /* homepage overlay */
 .overlay {
-  background-color: rgba(11, 153, 224, 0.4);
+  background-color: rgba(8, 43, 62, 0.68);
   height: 100%;
   left: 0;
   position: absolute;
@@ -375,6 +420,9 @@ h3 {
 
 .card {
   margin-bottom: 60px;
+  border-radius: 8px;
+  box-shadow: 0 18px 45px rgba(16, 42, 67, 0.08);
+  overflow: hidden;
 }
 
 .card .role {
@@ -417,7 +465,7 @@ h3 {
 }
 
 #experience .card-action {
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: rgba(20, 106, 167, 0.06);
   border: none;
 }
 
@@ -431,7 +479,7 @@ h3 {
 
 .card-action span {
   font-size: 85%;
-  color: #666;
+  color: #52606d;
 }
 
 .card ul {
@@ -442,6 +490,18 @@ h3 {
   line-height: 200%;
   list-style-type: disc;
   margin-left: 24px;
+}
+
+.highlights-list {
+  background: #ffffff;
+  border-left: 4px solid #ffb703;
+  border-radius: 8px;
+  box-shadow: 0 14px 32px rgba(16, 42, 67, 0.06);
+  padding: 22px 28px;
+}
+
+.highlights-list li {
+  margin-left: 20px;
 }
 
 .card ul li li {
@@ -481,9 +541,14 @@ a.hoverline:hover {
 
 /* customized button for load more */
 .custom-blue-button {
-  background-color: rgb(46, 194, 231);
+  background-color: #146aa7 !important;
   color: white; /* Ensures text is visible against the blue background */
   border: none; /* Optional: Removes any default border */
+}
+
+.custom-blue-button:hover,
+.custom-blue-button:focus {
+  background-color: #0f5a8f !important;
 }
 
 #skills .card.large {
@@ -503,6 +568,29 @@ a.hoverline:hover {
   text-align: center;
   vertical-align: middle;
   display: table-cell;
+}
+
+#projects .card.medium {
+  height: 430px;
+}
+
+#projects .card.medium .card-image {
+  background: #eef7fb;
+  height: 210px;
+}
+
+#projects .card.medium .card-image img {
+  object-fit: cover;
+}
+
+#projects .card-content p {
+  color: #52606d;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+#projects .card-reveal {
+  background: #fbfdff;
 }
 
 /* .logo-small {
@@ -558,13 +646,13 @@ small {
 }
 
 .grey-text {
-  color: #666 !important;
+  color: #52606d !important;
 }
 
 /* main .teal-text */
 /* icon on the left column and all title names */
 .teal-text {
-  color: #2fabe8 !important;
+  color: #146aa7 !important;
 }
 
 /* .teal-text {
@@ -574,7 +662,15 @@ small {
 /* .teal */
 /* sections title bars */
 .teal {
-  background-color: #2fabe8 !important;
+  background-color: #146aa7 !important;
+}
+
+.blue-grey {
+  background-color: #146aa7 !important;
+}
+
+.flow-text {
+  line-height: 1.7;
 }
 
 /* .teal {
@@ -617,7 +713,7 @@ small {
     position: absolute;
   }
   nav a.button-collapse, nav a.button-collapse i {
-    color: #0a79e8;
+    color: #146aa7;
     height: 56px;
     line-height: 56px;
   }
@@ -660,6 +756,9 @@ small {
   }
   section#intro {
     margin-bottom: -64px;
+  }
+  #intro.section {
+    min-height: calc(100vh - 28px);
   }
   .card .role {
     position: relative;
@@ -705,5 +804,20 @@ small {
   }
   #intro.section {
     background-position-x: 30%;
+  }
+  .buttons a {
+    margin-right: 8px;
+  }
+  .resume-links {
+    display: block;
+  }
+  .resume-links .btn {
+    display: block;
+    margin-bottom: 12px;
+    width: 100%;
+  }
+  #place_travelled iframe {
+    width: 100%;
+    height: 360px;
   }
 }

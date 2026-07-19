@@ -2,14 +2,14 @@
 const projects = [
   {
     title: 'ValoPlanner',
-    summary: 'Webpage to Experience Powerful and Convincing Ranking System and Seamless Navigation',
+    summary: 'AWS-backed esports assistant that combines LLM guidance with player-focused match planning.',
     imageUrl: '/assets/img/444PRA/valoplanner_logo.jpg',
-    tools: 'Amazon Bedrock, CodePipepline, Lambda, EC2, CSS, Flask, waitress, HTML, JavaScript, Python',
+    tools: 'Amazon Bedrock, CodePipeline, Lambda, EC2, CSS, Flask, Waitress, HTML, JavaScript, Python',
     descriptions: [
-      'Top 25 finalist out of 3295 participants, winners to be announced in December 2024.',
+      'Top 25 finalist out of 3295 participants.',
       'Designed and implemented an LLM-powered digital assistant.',
       'Leveraged extensive data and utilized AWS Lambda and Bedrock to tune LLM agent.',
-      'Continuous deployment via AWS CodePipeline and CodeDeploy',
+      'Built continuous deployment via AWS CodePipeline and CodeDeploy.',
       'Final report: https://drive.google.com/file/d/18IluqYHskcRQp12X4Z4pNzl6kuzy7iNk/view'
     ],
     demoLink: 'https://devpost.com/software/edg-learning',
@@ -18,9 +18,9 @@ const projects = [
   },
   {
     title: 'Rift Ranks',
-    summary: 'Webpage to Experience Powerful and Convincing Ranking System and Seamless Navigation',
+    summary: 'Global League of Legends ranking platform powered by PCA, TrueSkill, and a Flask backend.',
     imageUrl: '/assets/img/444PRA/rift_ranks_logo.jpg',
-    tools: 'Amazon EC2, Amazon Route 53, Apache, CSS, Flask, gunicorn, HTML, JavaScript, nginx, Python, SQL, Webflow',
+    tools: 'Amazon EC2, Amazon Route 53, Apache, CSS, Flask, Gunicorn, HTML, JavaScript, NGINX, Python, SQL, Webflow',
     descriptions: [
       'Winner as 6th place out of 1813 participants.',
       'Developed a platform for global League of Legends team rankings.',
@@ -34,13 +34,13 @@ const projects = [
   },
   {
     title: 'Model Master',
-    summary: 'A comprehensive collection of AI models in various fields.',
+    summary: 'AI model discovery tool that indexes Hugging Face data and serves searchable recommendations.',
     imageUrl: '/assets/img/444PRA/Model_Master_logo.jpg',
-    tools: 'beautifulsoup, css, Flask, HTML, JavaScript, Nodejs, Python, SQL, TiDB, Webflow',
+    tools: 'Beautiful Soup, CSS, Flask, HTML, JavaScript, Node.js, Python, SQL, TiDB, Webflow',
     descriptions: [
       'Scrapes AI model data from Hugging Face into TiDB.',
       'Uses Flask to handle HTTP requests and interact with TiDB.',
-      'Enable AI chatbot to help search for requested models.',
+      'Enabled an AI chatbot to help search for requested models.',
       'Presents data via Webflow and custom JavaScript.'
     ],
     demoLink: 'https://devpost.com/software/project_name-wf9l8d',
@@ -49,14 +49,14 @@ const projects = [
   },
   {
     title: 'EMOXT',
-    summary: 'Transcribe recorded and add emojis using machine learning.',
+    summary: 'Audio transcription app that detects emotion and enriches text with expressive emoji cues.',
     imageUrl: '/assets/img/444PRA/EMOXT_logo.jpg',
-    tools: 'Flask, HTML, JavaScript, css, Python, Assembly.ai',
+    tools: 'Flask, HTML, JavaScript, CSS, Python, AssemblyAI',
     descriptions: [
-      'Transcribes audio using Assembly.ai.',
-      'Detects emotions in the transcribed text.',
-      'Inserts emojis based on detected emotions.',
-      'Integrates frontend and backend with Flask.'
+      'Transcribed audio using AssemblyAI.',
+      'Detected emotions in the transcribed text.',
+      'Inserted emojis based on detected emotions.',
+      'Integrated frontend and backend with Flask.'
     ],
     demoLink: 'https://devpost.com/software/emoxt',
     sourceLink: 'https://github.com/AlezHibali/TOHack2022_EMOXT',
@@ -70,14 +70,14 @@ function generateProjectHTML(project) {
     <div class="col s12 m6 l4">
       <div class="card medium">
         <div class="card-image waves-effect waves-block waves-light">
-          <img alt="${project.title}" src="${project.imageUrl}" style="height: 100%; width: 100%" class="activator" />
+          <img alt="${project.title}" src="${project.imageUrl}" class="activator" />
         </div>
         <div class="card-content">
           <span class="card-title activator teal-text hoverline">${project.title}<i class="mdi-navigation-more-vert right"></i></span>
           <p>${project.summary}</p>
         </div>
         <div class="card-reveal">
-          <span class="card-title grey-text"><small>descriptions</small><i class="mdi-navigation-close right"></i></span>
+          <span class="card-title grey-text"><small>Project details</small><i class="mdi-navigation-close right"></i></span>
           <ul>
             <li><b>Tools:</b> ${project.tools}</li>
             ${project.descriptions.map(description => `<li>${description}</li>`).join('')}
